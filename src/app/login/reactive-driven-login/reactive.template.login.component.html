@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="container-fluid">
+        <form [formGroup] = "loginForm" (ngSubmit)="login()">
+            <div class="form-group">
+                <label for="username" class="form-label">Username: </label>
+                <input type="text" class="form-control" id="username" required name="username" formControlName="username">
+                <div [hidden]="loginForm.controls['username'].valid || loginForm.controls['username'].pristine" class="alert alert-danger">
+                    Username is required
+                </div>
+            </div>
+        <br>
+            <div class="form-group">
+                <label for="password" class="form-label">Password: </label>
+                <input type="text" class="form-control" id="password" required name="password" formControlName="password">
+                <div [hidden]="loginForm.controls['password'].valid || loginForm.controls['password'].pristine" class="alert alert-danger">
+                    Password is required
+                </div>
+            </div>
+        <br>
+        <a href="" routerLink="/register"></a>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

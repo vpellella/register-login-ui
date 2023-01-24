@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="container-fluid">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+            <div class="form-group">
+                <label for="username" class="form-label">Username: </label>
+                <input type="text" class="form-control" id="username" required name="username"
+                    formControlName="username">
+                <div [hidden]="registerForm.controls['username'].valid || registerForm.controls['username'].pristine"
+                    class="alert alert-danger">
+                    Username is required
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password" class="form-label">Password: </label>
+                <input type="text" class="form-control" id="password" required name="password"
+                    formControlName="password">
+                <div [hidden]="registerForm.controls['password'].valid || registerForm.controls['password'].pristine"
+                    class="alert alert-danger">
+                    Password is required
+                </div>
+            </div>
+            <br>
+            <div>
+                <label for="roles" class="form-label">Roles: </label>
+                <ng-multiselect-dropdown name="roles"
+                    [value]="'custom placeholder'"
+                    [settings]="dropdownSettings"
+                    [data]="availableRoles"
+                    [(ngModel)]="userRoles"
+                    (onSelect)="onUserRoleSelect($event)"
+                    (onSelectAll)="onUserRoleSelectAll($event)"
+                    (onDeSelect)="onUserRoleDeSelect($event)"
+                    (onSelectAll)="onUserRoleDeSelectAll($event)"
+                    [ngModelOptions]="{standalone: true}"
+                    >
+                </ng-multiselect-dropdown>
+            </div>
+            <br>
+            <div>
+                <label for="authorities" class="form-label">Authorities: </label>
+                <ng-multiselect-dropdown name="authorities"
+                [value]="'custom placeholder'"
+                [settings]="dropdownSettings"
+                [data]="availableAuthorities"
+                [(ngModel)]="userAuthorities"
+                (onSelect)="onAuthorityRoleSelect($event)"
+                (onSelectAll)="onAuthorityRoleSelectAll($event)"
+                (onDeSelect)="onAuthorityRoleDeSelect($event)"
+                (onDeSelectAll)="onAuthorityRoleDeSelectAll($event)"
+                [ngModelOptions]="{standalone: true}"
+                >
+            </ng-multiselect-dropdown>
+            
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+</div>

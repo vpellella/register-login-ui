@@ -1,0 +1,16 @@
+<p>dashboard works!</p>
+<p>{{welcomeMessage}}</p>
+
+
+
+
+
+
+
+
+<form (ngSubmit)="updateUsername()">
+<input type="text" name="newUsername" id="newUsername" required [(ngModel)]="newUsername">
+<button type="submit">Update</button>
+</form>
+
+<button routerLink="/upload">Upload</button>

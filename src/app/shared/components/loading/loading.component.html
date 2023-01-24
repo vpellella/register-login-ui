@@ -1,0 +1,9 @@
+<!-- <div class="progress progress-striped active" *ngIf="showLoadingBar">
+    <div class="progress-bar progress-bar-success" [@startEnd]="isLoading? 'start': 'end'">
+    </div>
+</div> -->
+
+<div class="progress progress-striped active" *ngIf="showLoadingBar | async">
+    <div class="progress-bar progress-bar-success" [@startEnd]="isLoading? 'start': 'end'">
+    </div>
+</div>

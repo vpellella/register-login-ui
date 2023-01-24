@@ -1,6 +1,6 @@
 {
-  "name": "sample-login",
-  "version": "0.0.0",
+  "name": "register-login-ui",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,9 +15,14 @@
     "@angular/compiler": "^14.2.0",
     "@angular/core": "^14.2.0",
     "@angular/forms": "^14.2.0",
+    "@angular/material": "^7.0.0",
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@ngrx/effects": "14.2.0",
+    "@ngrx/router-store": "^14.2.0",
+    "@ngrx/store": "14.2.0",
+    "ng-multiselect-dropdown": "^0.3.9",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
