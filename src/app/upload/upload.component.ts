@@ -25,7 +25,7 @@ export class UploadComponent implements OnInit {
     var formData = new FormData()
     formData.append("file", this.file, this.file.name)
     console.log(formData)
-    this.httpClient.post("http://localhost:8080/uploadfile", formData,{
+    this.httpClient.post("/uploadfile", formData,{
       responseType: 'text'
     }
     ).subscribe({

@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
     // this._store.pipe(select(getCurrentUsername)).subscribe(usernameMessage => {
     //   this.welcomeMessage = usernameMessage
     // });
-    this.httpClient.post("http://localhost:8080/hello", {},{
+    this.httpClient.post("/hello", {},{
       responseType: 'text'
     }).subscribe({
       next: (data) => {

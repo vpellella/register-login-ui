@@ -24,7 +24,7 @@ export class AuthService {
     private loadingService: LoadingService) { }
 
   login(username:string , password: string) {
-    this.httpClient.post<any>("http://localhost:8080/login", {
+    this.httpClient.post<any>("/login", {
       "username": username,
       "password": password
     }).subscribe({

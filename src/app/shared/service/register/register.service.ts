@@ -30,7 +30,7 @@ export class RegisterService {
     headers.append('Accept', 'application/json');
 
 
-    this.httpClient.post<any>("http://localhost:8080/register",
+    this.httpClient.post<any>("/register",
       {
         "username": username,
         "password": password,
